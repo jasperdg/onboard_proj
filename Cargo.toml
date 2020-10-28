@@ -1,0 +1,32 @@
+[package]
+name = "near_internal_demo"
+version = "0.1.0"
+authors = ["jasperdg <jasperdegooijer@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+borsh = "*"
+near-sdk = "2.0.0"
+uint = { version = "0.8.3", default-features = false }
+wee_alloc = { version = "0.4.5", default-features = false, features = [] }
+
+[profile.release]
+codegen-units = 1
+overflow-checks = true
+# Tell `rustc` to optimize for small code size.
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+
+[dev-dependencies]
+lazy_static = "1.4.0"
+quickcheck = "0.9"
+quickcheck_macros = "0.9"
+log = "0.4"
+env_logger = { version = "0.7.1", default-features = false }
+near-crypto = { git = "https://github.com/nearprotocol/nearcore.git" }
+near-primitives = { git = "https://github.com/nearprotocol/nearcore.git" }
+near-runtime-standalone = { git = "https://github.com/nearprotocol/nearcore.git" }
