@@ -772,6 +772,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "near-internal-demo"
+version = "0.1.0"
+dependencies = [
+ "borsh",
+ "env_logger",
+ "lazy_static",
+ "log",
+ "near-crypto",
+ "near-primitives",
+ "near-runtime-standalone",
+ "near-sdk",
+ "quickcheck",
+ "quickcheck_macros",
+ "uint",
+ "wee_alloc",
+]
+
+[[package]]
 name = "near-metrics"
 version = "0.1.0"
 source = "git+https://github.com/nearprotocol/nearcore.git#774ac1fe95ef6d1e1741517b7bb46f989c767c32"
@@ -1058,24 +1076,6 @@ dependencies = [
  "pwasm-utils",
  "wasmer-runtime",
  "wasmer-runtime-core",
-]
-
-[[package]]
-name = "near_internal_demo"
-version = "0.1.0"
-dependencies = [
- "borsh",
- "env_logger",
- "lazy_static",
- "log",
- "near-crypto",
- "near-primitives",
- "near-runtime-standalone",
- "near-sdk",
- "quickcheck",
- "quickcheck_macros",
- "uint",
- "wee_alloc",
 ]
 
 [[package]]
